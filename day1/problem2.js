@@ -1,7 +1,16 @@
-// Write a function that capitalizes the first letter of every word in a sentence.
+// Find the largest number in an array
 
-function capitalizeWords(str) {
-    return str.split(" ").map(word=> word ? word[0].toUpperCase()+ word.slice(1) : "").join(" ");
+// Input:  [3, 7, 2, 9, 5]
+// Output: 9
+
+function findMax(arr) {
+    let largestNum = arr[0];
+    for(let i=1; i <arr.length; i++){
+        if(largestNum < arr[i]){
+            largestNum = arr[i];
+        }
+    }
+    return largestNum;
 }
 
-console.log(capitalizeWords("hello world from javascript"));
+console.log(findMax([3, 7, 2, 9, 5]));

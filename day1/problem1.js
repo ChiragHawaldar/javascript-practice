@@ -1,7 +1,14 @@
-// Write a function that returns the sum of numbers divisible by 3.
+// Find the sum of all numbers in an array
 
-function sumDivisibleByThree(arr) {
-    return arr.filter(num => num%3 ===0).reduce((total , num)=> total+num,0);
+// Input:  [1, 2, 3, 4]
+// Output: 10
+
+function sumArray(arr) {
+    let sum = 0;
+    for(let i=0 ; i<arr.length;i++){
+        sum += arr[i];
+    }
+    return sum;
 }
 
-console.log(sumDivisibleByThree([3,5,6,8,9]));
+console.log(sumArray([1, 2, 3, 4]));

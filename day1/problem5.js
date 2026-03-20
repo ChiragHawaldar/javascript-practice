@@ -1,18 +1,16 @@
-// Check if two arrays are equal.
+// Return a new array with only odd numbers
 
-function arraysEqual(arr1, arr2) {
-    if(arr1.length !== arr2.length) return false;
+// Input:  [1, 2, 3, 4, 5]
+// Output: [1, 3, 5]
 
-
-    for(let i = 0; i<arr1.length;i++){
-        if(arr1[i] !== arr2[i]){
-            return false;
+function getOdds(arr) {
+    let newArr =[];
+     for(let i=0; i<arr.length; i++){
+        if(arr[i] % 2 !== 0){
+            newArr.push(arr[i]);
         }
-    }
-
-    return true
+     }
+     return newArr;
 }
 
-
-console.log(arraysEqual([1,2,3] , [1,2,3]));
-console.log(arraysEqual([1,2,3] , [1,2,4]));
+console.log(getOdds([1, 2, 3, 4, 5]));
