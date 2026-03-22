@@ -4,19 +4,23 @@
 // Output: 5
 
 function firstUnique(arr) {
-    let freq = {};
+     let freq = {};
 
-    for (let i = 0; i < arr.length; i++) {
-        freq[arr[i]] = (freq[arr[i]] || 0) + 1;
-    }
+     for(let i=0; i<arr.length;i++){
+          if(freq[arr[i]] !== undefined){
+               freq[arr[i]] +=1;
+          }else{
+               freq[arr[i]] =1;
+          }
+     }
 
-    for (let i = 0; i < arr.length; i++) {
-        if (freq[arr[i]] === 1) {
+    for(let i = 0; i < arr.length; i++){
+        if( freq[arr[i]]==1){
             return arr[i];
         }
     }
 
-    return null; 
+    return null;
 }
 
 console.log(firstUnique([4, 5, 1, 2, 0, 4]));
