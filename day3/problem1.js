@@ -16,10 +16,7 @@ function twoSmallest(arr) {
         }
     }
 
-    newArr.push(second);
-    newArr.push(smallest);
-
-    return newArr;
+    return second !== Infinity ? [smallest, second] : [smallest, null];
 }
 
 console.log(twoSmallest([10, 5, 8, 20]));
