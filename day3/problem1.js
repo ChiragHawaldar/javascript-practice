@@ -6,7 +6,6 @@
 function twoSmallest(arr) {
     let smallest = +Infinity;
     let second = +Infinity;
-    let newArr = [];
     for(let i=0;i<arr.length;i++){
         if(arr[i] < smallest){
             second = smallest;
