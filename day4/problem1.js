@@ -7,13 +7,22 @@
 // Output: false
 
 function isPalindrome(str) {
-    let arrStr = str.split("");
-    let newArr=[];
-    if(str.length < 1) return "empty string";
-    for(let i = arrStr.length-1; i >=0;i--){
-        newArr.push(arrStr[i]);
+
+    let left = 0;
+    let right = str.length-1;
+
+    while (left < right) {
+        
+    if(str[left] === str[right]){
+        left++;
+        right--;                                                                                                                  
+    }else {
+        return false;
     }
-    return str===newArr.join("")?true:false;
+
+}
+return true;
+
 }
 
 console.log(isPalindrome("madam"));
